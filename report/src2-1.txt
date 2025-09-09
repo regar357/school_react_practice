@@ -1,0 +1,44 @@
+import React from "react";
+
+function App() {
+  const name = "김창복";
+  const isStudent = true;
+  const hobbies = ["프로그래밍", "독서", "산책"];
+  const skills = ["React", "JavaScript", "Node.js", "HTML/CSS"];
+  const projects = [
+    { title: "개인 블로그", link: "#" },
+    { title: "쇼핑몰 클론코딩", link: "#" },
+    { title: "포트폴리오 웹사이트", link: "#" },
+  ];
+
+  return (
+    <div>
+      <h2>{name}의 포트폴리오</h2>
+      <p>{isStudent ? "현재 학생입니다." : "학생이 아닙니다."}</p>
+      <h2>기술 스택</h2>
+      <ul>
+        {skills.map((skill, i) => (
+          <li key={i}>{skill}</li>
+        ))}
+      </ul>
+      <h2>취미</h2>
+      <ul>
+        {hobbies.map((hobby, i) => (
+          <li key={i}>{hobby}</li>
+        ))}
+      </ul>
+      <h2>프로젝트</h2>
+      <ul>
+        {projects.map((project, i) => (
+          <li key={i}>
+            <a href={project.link}>{project.title}</a>
+          </li>
+        ))}
+      </ul>
+      <label htmlFor="input">한 마디:</label>
+      <input id="input" type="text" />
+    </div>
+  );
+}
+
+export default App;
