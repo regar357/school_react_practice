@@ -1,13 +1,9 @@
-import './App.css';
-import Comp1 from "./components/Comp1"
-import Comp2 from "./components/Comp2"
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <h1>Hello, React!!!</h1>
-      <Comp1/>
-      <Comp2/>
     </div>
   );
 }
