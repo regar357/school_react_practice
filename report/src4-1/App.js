@@ -1,0 +1,39 @@
+import "./App.css";
+
+function ProductItem({ name, price }) {
+  return (
+    <div>
+      {name} - {price}원
+    </div>
+  );
+}
+
+function ProductList({ products }) {
+  return (
+    <div>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>
+            <ProductItem name={product.name} price={product.price} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function App() {
+  const products = [
+    { id: 1, name: "노트북", price: 1200000 },
+    { id: 2, name: "키보드", price: 50000 },
+    { id: 3, name: "마우스", price: 30000 },
+  ];
+  return (
+    <div className="App">
+      <h2>문제 1&#41; 상품 목록</h2>
+      <ProductList products={products} />
+    </div>
+  );
+}
+
+export default App;
