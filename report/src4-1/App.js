@@ -1,26 +1,5 @@
 import "./App.css";
-
-function ProductItem({ name, price }) {
-  return (
-    <div>
-      {name} - {price}원
-    </div>
-  );
-}
-
-function ProductList({ products }) {
-  return (
-    <div>
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <ProductItem name={product.name} price={product.price} />
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+import ProductList from "./components/ProcuctList";
 
 function App() {
   const products = [
