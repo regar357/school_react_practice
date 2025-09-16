@@ -1,0 +1,24 @@
+function UserInfo({ user }) {
+  const isMinor = user.age < 18;
+
+  return (
+    <div>
+      <p>이름: {user.name}</p>
+      <p>나이: {user.age}</p>
+      <p>{isMinor ? "미성년자" : "성인"}</p>
+    </div>
+  );
+}
+
+function App() {
+  const user = { name: "홍길동", age: 17 };
+
+  return (
+    <div className="App">
+      <h1>문제 3&#41; 사용자 정보</h1>
+      <UserInfo user={user} />
+    </div>
+  );
+}
+
+export default App;

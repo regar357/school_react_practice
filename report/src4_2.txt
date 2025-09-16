@@ -1,0 +1,27 @@
+import { useState } from "react";
+
+function CounterControls({ onInc, onDec }) {
+  return (
+    <div>
+      <button onClick={onInc}>증가</button>
+      <button onClick={onDec}>감소</button>
+    </div>
+  );
+}
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const handleInc = () => setCount((c) => c + 1);
+  const handleDec = () => setCount((c) => c - 1);
+
+  return (
+    <div className="App">
+      <h1>문제 2&#41; 카운터</h1>
+      <p>현재 값: {count}</p>
+      <CounterControls onInc={handleInc} onDec={handleDec} />
+    </div>
+  );
+}
+
+export default App;
